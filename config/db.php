@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=mconnect',
-    'username' => 'mconnect',
+    'dsn' => 'mysql:host=localhost;dbname=musconnect',
+    'username' => 'musconnect',
     'password' => 'a%4qtI29',
     'charset' => 'utf8',
 
