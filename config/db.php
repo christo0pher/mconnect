@@ -4,7 +4,7 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=musconnect',
     'username' => 'musconnect',
-    'password' => 'a%4qtI29',
+    'password' => 'asdasdasdasd123123asdasdasd!2312312',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
