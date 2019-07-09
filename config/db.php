@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=musconnect',
-    'username' => 'musconnect',
+    'dsn' => 'mysql:host=localhost;dbname=musicconnect',
+    'username' => 'musicconnect',
     'password' => 'asdasdasdasd123123asdasdasd!2312312',
     'charset' => 'utf8',
 
