@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=62.108.32.173;dbname=musiccconnect',
+    'dsn' => 'mysql:host=127.0.0.1;dbname=musiccconnect',
     'username' => 'musiccconnect',
     'password' => 'E9s%71jn',
     'charset' => 'utf8',
