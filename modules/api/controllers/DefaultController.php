@@ -4,22 +4,17 @@ namespace app\modules\api\controllers;
 
 use app\models\User;
 use app\models\UserToken;
-use yii\filters\AccessControl;
-use yii\filters\auth\CompositeAuth;
-use yii\filters\auth\HttpBasicAuth;
-use yii\filters\auth\HttpBearerAuth;
-use yii\filters\auth\QueryParamAuth;
 use yii\filters\VerbFilter;
-use yii\web\Response;
+use yii\helpers\ArrayHelper;
 
 /**
  * Default controller for the `api` module
  */
-class DefaultController extends \yii\rest\Controller
+class DefaultController extends ApiController
 {
     public function behaviors()
     {
-        return [
+        return ArrayHelper::merge(parent::behaviors(), [
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
@@ -28,16 +23,7 @@ class DefaultController extends \yii\rest\Controller
                     'index' => ['get', 'post']
                 ],
             ],
-            'authenticator' => [
-                'class' => CompositeAuth::class,
-                'authMethods' => [
-                    HttpBasicAuth::class,
-                    HttpBearerAuth::class,
-                    QueryParamAuth::class,
-                ],
-                'except' => ['auth', 'register'],
-            ]
-        ];
+        ]);
     }
 
     /**
