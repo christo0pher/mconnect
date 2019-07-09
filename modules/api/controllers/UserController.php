@@ -12,6 +12,9 @@ use app\models\Playback;
 
 class UserController extends ApiController
 {
+    /**
+     * @return array
+     */
     public function actionSavePlayback()
     {
         /** @var \app\models\User $user */
