@@ -31,3 +31,6 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+# DB configuration is different per machine
+config/db.php
