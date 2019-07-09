@@ -4,7 +4,7 @@ return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=musicconnect',
     'username' => 'musicconnect',
-    'password' => 'asdasdasdasd123123asdasdasd!2312312',
+    'password' => 'L3b#s55b',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
