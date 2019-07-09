@@ -16,6 +16,9 @@ use yii\rest\Controller;
 
 class ApiController extends Controller
 {
+    /**
+     * @return array
+     */
     public function behaviors()
     {
         return [
