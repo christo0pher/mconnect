@@ -22,10 +22,10 @@ class UserController extends ApiController
 
         if (!($playback = $user->playback)) {
             $playback = new Playback();
-            $playback->user_id = $user->id;
         }
 
         $playback->load(\Yii::$app->request->post());
+        $playback->user_id = $user->id;
 
         if (!$playback->validate()) {
             return ['success' => false, 'errors' => $playback->errors];
