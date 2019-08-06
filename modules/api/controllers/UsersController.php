@@ -16,7 +16,7 @@ class UsersController extends ApiController
     {
         return User::find()
                    ->select(['id', 'username'])
-                   ->andWhere(['!=', 'id' => \Yii::$app->user->id])
+                   ->andWhere(['!=', 'id', \Yii::$app->user->id])
                    ->with('playback')
                    ->all();
     }
