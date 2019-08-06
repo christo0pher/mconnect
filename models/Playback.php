@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property int $user_id
+ * @property string $name
  * @property string $playback_id
  * @property double $playback_position
  * @property string $playback_state
@@ -36,6 +37,7 @@ class Playback extends \yii\db\ActiveRecord
             [['user_id'], 'integer'],
             [['playback_position', 'playback_timestamp'], 'number'],
             [['playback_time'], 'safe'],
+            [['name'], 'string'],
             [['playback_id', 'playback_state'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -49,6 +51,7 @@ class Playback extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'user_id' => Yii::t('app', 'User ID'),
+            'name' => Yii::t('app', 'Name'),
             'playback_id' => Yii::t('app', 'Playback ID'),
             'playback_position' => Yii::t('app', 'Playback Position'),
             'playback_state' => Yii::t('app', 'Playback State'),
