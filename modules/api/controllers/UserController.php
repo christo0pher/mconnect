@@ -31,6 +31,6 @@ class UserController extends ApiController
             return ['success' => false, 'errors' => $playback->errors];
         }
 
-        return ['success' => $playback->save(), 'errors' => $playback->errors, 'message' => 'Saved the playback state'];
+        return ['success' => $playback->save(), 'errors' => $playback->errors, 'post' => \Yii::$app->request->post()];
     }
 }
