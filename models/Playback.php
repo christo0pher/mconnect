@@ -37,7 +37,7 @@ class Playback extends \yii\db\ActiveRecord
             [['playback_position', 'playback_timestamp'], 'number'],
             [['playback_time'], 'safe'],
             [['playback_id', 'playback_state'], 'string', 'max' => 255],
-            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 
@@ -62,7 +62,7 @@ class Playback extends \yii\db\ActiveRecord
      */
     public function getUser()
     {
-        return $this->hasOne(User::className(), ['id' => 'user_id']);
+        return $this->hasOne(User::class, ['id' => 'user_id']);
     }
 
     /**
