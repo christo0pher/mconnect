@@ -16,9 +16,9 @@ class m190708_123229_add_playback_table extends Migration
             'id' => $this->primaryKey(),
             'user_id' => $this->integer(),
             'playback_id' => $this->string(),
-            'playback_position' => $this->float(),
+            'playback_position' => $this->decimal(16, 6),
             'playback_state' => $this->string(),
-            'playback_timestamp' => $this->float(),
+            'playback_timestamp' => $this->decimal(16, 6),
             'playback_time' => $this->dateTime(3),
         ]);
 
