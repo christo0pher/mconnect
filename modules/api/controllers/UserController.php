@@ -28,9 +28,9 @@ class UserController extends ApiController
         $playback->user_id = $user->id;
 
         if (!$playback->validate()) {
-            return ['success' => false, 'errors' => $playback->errors, 'attributes' => $playback->attributes];
+            return ['success' => false, 'errors' => $playback->errors];
         }
 
-        return ['success' => $playback->save(), 'errors' => $playback->errors, 'post' => \Yii::$app->request->post()];
+        return ['success' => $playback->save(), 'errors' => $playback->errors];
     }
 }
