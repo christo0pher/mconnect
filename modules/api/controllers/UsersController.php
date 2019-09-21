@@ -21,4 +21,17 @@ class UsersController extends ApiController
                    ->asArray(1)
                    ->all();
     }
+
+    public function actionSearch()
+    {
+        $text = \Yii::$app->request->post('text');
+
+        return User::find()
+            ->select(['id', 'username'])
+            ->andWhere(['LIKE', 'username', $text])
+            ->andWhere(['!=', 'id', \Yii::$app->user->id])
+            ->limit(200)
+            ->asArray(1)
+            ->all();
+    }
 }
